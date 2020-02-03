@@ -40,6 +40,24 @@ namespace PurchaseRequestDLL
         FindPurchaseRequestByStatusDataSet aFindPurchaseRequestByStatusDataSet;
         FindPurchaseRequestByStatusDataSetTableAdapters.FindPurchaseRequestByStatusTableAdapter aFindPurchaseRequestByStatusTableAdapter;
 
+        FindPurchaseRequestByRequestDateDataSet aFindPurchaseRequestByRequestDateDataSet;
+        FindPurchaseRequestByRequestDateDataSetTableAdapters.FindPurchaseRequestByRequestDateTableAdapter aFindPurchaseRequestByRequestDateTableAdapter;
+
+        public FindPurchaseRequestByRequestDateDataSet FindPurchaseRequestByRequestDate(DateTime datRequestDate)
+        {
+            try
+            {
+                aFindPurchaseRequestByRequestDateDataSet = new FindPurchaseRequestByRequestDateDataSet();
+                aFindPurchaseRequestByRequestDateTableAdapter = new FindPurchaseRequestByRequestDateDataSetTableAdapters.FindPurchaseRequestByRequestDateTableAdapter();
+                aFindPurchaseRequestByRequestDateTableAdapter.Fill(aFindPurchaseRequestByRequestDateDataSet.FindPurchaseRequestByRequestDate, datRequestDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Purchase Request Class // Find Purchase Request By Request Date " + Ex.Message);
+            }
+
+            return aFindPurchaseRequestByRequestDateDataSet;
+        }
         public FindPurchaseRequestByStatusDataSet FindPurchaseRequestByStatus(string strStatus)
         {
             try

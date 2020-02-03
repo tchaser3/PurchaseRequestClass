@@ -49,6 +49,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindPurchaseRequestByPONumberDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindPurchaseRequestByRequestDateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindPurchaseRequestByRequestDateDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindPurchaseRequestByStatusDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -114,6 +119,17 @@
     </None>
     <None Include="FindPurchaseRequestByPONumberDataSet.xss">
       <DependentUpon>FindPurchaseRequestByPONumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPurchaseRequestByRequestDateDataSet.xsc">
+      <DependentUpon>FindPurchaseRequestByRequestDateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPurchaseRequestByRequestDateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindPurchaseRequestByRequestDateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindPurchaseRequestByRequestDateDataSet.xss">
+      <DependentUpon>FindPurchaseRequestByRequestDateDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindPurchaseRequestByStatusDataSet.xsc">
       <DependentUpon>FindPurchaseRequestByStatusDataSet.xsd</DependentUpon>
